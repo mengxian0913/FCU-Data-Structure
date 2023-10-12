@@ -19,7 +19,15 @@ using namespace std;
 
 const int MAXN = 8;
 
-int bin_to_dec(string ss) {
+struct MyBin {
+  int num1, num2;
+  bool overflow;
+  int bin_to_dec(string);
+  pair<int, string> Dec_to_Bin(int);
+};
+
+
+int MyBin::bin_to_dec(string ss) {
   int dec = 0, base = 0;
   for(int i=ss.size()-1; i >= 0; i--) {
     dec += (int)(ss[i] - '0') << (base++);
@@ -27,19 +35,33 @@ int bin_to_dec(string ss) {
   return dec;
 }
 
-string Dec_to_Bin(int num) {
-  
-  int bin[MAXN];
+pair<int, string> MyBin::Dec_to_Bin(int num) {
+
+  deque<int> bin;
   bool ch = false;
+  int sign = 0;
   if(num < 0) {
     num *= -1;
     ch = true;
+    sign = 1;
   }
   
-  for(int i=0; i<MAXN; i++) {
-    bin[i] = (num >> i) & 1;
+  while(num) {
+    bin.pb(num & 1);
+    num >>= 1;
   }
+
+  overflow = false;
   
+  if(bin.size() > MAXN) {
+    overflow = true;
+  }
+
+
+  while(bin.size() < MAXN) {
+    bin.pb(0);
+  }
+
   if(ch) {
     for(int i=0;i<MAXN;i++) {
       bin[i] ^= 1;
@@ -48,40 +70,51 @@ string Dec_to_Bin(int num) {
     bin[ind]++;
     while(bin[ind] > 1) {
       bin[ind] = 0;
-      bin[ind++]++;
+      ind++;
+      if(ind >= MAXN) {
+        overflow = true;
+        break;
+      }
+      bin[ind]++;
     }
   }
   
   string res = "";
-  for(int i=MAXN-1; i >= 0; i--) {
+  for(int i = MAXN - 1; i >= 0; i--) {
     res += to_string(bin[i]);
   }
-  
-  return res;
+
+  return {sign, res};
 }
 
-void solve(){
-  freopen("./hw2.txt", "r", stdin);
-  freopen("./result.txt", "w", stdout);
+void solve(){ 
+  MyBin bin;
   string num1, num2, sign;
   while(cin >> num1 >> sign >> num2) {
-    int n1 = bin_to_dec(num1), n2 = bin_to_dec(num2), ans = 0;  
+    bin.num1 = bin.bin_to_dec(num1), bin.num2 = bin.bin_to_dec(num2);
+    int result = 0;  
     if(sign == "+") {
-      ans = n1 + n2;
+      result = bin.num1 + bin.num2;
     } else { 
-      ans = n1 - n2;
+      result = bin.num1 - bin.num2;
     }
   
-    cout << num1 << " " << sign << " " << num2 << " = " << Dec_to_Bin(ans) << "(" << n1 << " " << sign << " " << n2 << " = " << ans << ")\n";
+    pair<int, string> ans = bin.Dec_to_Bin(result);
+    cout << num1 << " " << sign << " " << num2 << " = " << ans.ff << " " << ans.ss << " ( " << bin.num1 << " " << sign << " " << bin.num2 << " = " << result << " ) "
+    << (bin.overflow ? "(* Overflow)\n" : "\n");
   }
    
-  fclose(stdin);
-  fclose(stdout);
   return;
 }
 
 signed main(){
-    fastIO
-    solve();
+  fastIO
+  freopen("./hw2.txt", "r", stdin);
+  freopen("./result.txt", "w", stdout);
+    
+  solve();
+
+  fclose(stdin);
+  fclose(stdout);
     return 0;
 }

@@ -87,6 +87,14 @@ pair<int, string> MyBin::Dec_to_Bin(int num) {
   return {sign, res};
 }
 
+string full(string now) {
+  while(now.size() < MAXN) {
+    now = "0" + now;
+  }
+  return now;
+}
+
+
 void solve(){ 
   MyBin bin;
   string num1, num2, sign;
@@ -100,7 +108,7 @@ void solve(){
     }
   
     pair<int, string> ans = bin.Dec_to_Bin(result);
-    cout << num1 << " " << sign << " " << num2 << " = " << ans.ff << " " << ans.ss << " ( " << bin.num1 << " " << sign << " " << bin.num2 << " = " << result << " ) "
+    cout << full(num1) << " " << sign << " " << full(num2) << " = " << ans.ff << " " << ans.ss << " ( " << bin.num1 << " " << sign << " " << bin.num2 << " = " << result << " ) "
     << (bin.overflow ? "(* Overflow)\n" : "\n");
   }
    
@@ -116,5 +124,5 @@ signed main(){
 
   fclose(stdin);
   fclose(stdout);
-    return 0;
+  return 0;
 }

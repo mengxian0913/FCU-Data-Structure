@@ -16,7 +16,7 @@ using namespace std;
 #define pb push_back
 #define all(aa) aa.begin(),aa.end()
 #define MOD (int)(1e9+7)
-#define MAXN (int)(1e3 + 10)
+
 
 struct polynomial {
   int coef;
@@ -24,6 +24,7 @@ struct polynomial {
 };
 
 struct MyPoly {
+  // vector<polynomial> terms;
   polynomial terms[MAXN];
   int idx;
   MyPoly();
@@ -55,93 +56,78 @@ bool cmp(polynomial a, polynomial b) {
 MyPoly MyPoly::Mult(MyPoly poly2) {
   MyPoly result, result2;
 
-  for(int i = 0; i < idx; i++) {
-    for(int j = 0; j < poly2.idx; j++) {
-      polynomial current = {terms[i].coef * poly2.terms[j].coef, terms[i].expon + poly2.terms[j].expon}; 
-      result.terms[result.idx] = current;
-      result.idx++;
+  for(int i = 0; i < terms.size(); i++) {
+    for(int j = 0; j < poly2.terms.size(); j++) {
+      polynomial current = {terms[i].coef * poly2.terms[j].coef, terms[i].expon + poly2.terms[j].expon};
+      result.terms.pb(current);
     }
   }
 
-  sort(result.terms, result.terms + result.idx, cmp);
+  sort(all(result.terms), cmp);
+  
   polynomial cur = result.terms[0];
 
-  for(int i = 1; i < result.idx; i++) {
+  for(int i = 1; i < result.terms.size(); i++) {
     if(result.terms[i].expon == cur.expon) {
-      cur.coef += result.terms[i].coef;      
+      cur.coef += result.terms[i].coef;
     } else {
-      result2.terms[result2.idx++] = cur;
+      result2.terms.pb(cur);
       cur = result.terms[i];
     }
   }
-
-  result2.terms[result2.idx++] = cur;
-
+  
   return result2;
 }
 
 void MyPoly::Remove(int expon) {
-  int re_idx = -1;
-  MyPoly temp;
-
-  for(int i = 0; i < idx; i++) {
+  int idx = -1;
+  for(int i = 0; i < terms.size(); i++) {
     if(terms[i].expon == expon) {
-      re_idx = i;
+      idx = i;
       break;
     }
   }
   
-  if(re_idx == -1) {
+  if(idx == -1) {
     cout << "The expon isn't in the function\n";
     return;
   }
 
+  vector<polynomial>::iterator it = terms.begin() + idx;
 
-  for(int i = 0; i < idx; i++) {
-    if(i == re_idx) {
-      continue;
-    }
-
-    temp.terms[temp.idx++] = terms[i];
-  }
-
-  idx = 0;
-  for(int i = 0; i < temp.idx; i++) {
-    terms[idx++] = temp.terms[i];
-  }
-
-
+  terms.erase(it);
   cout << "Success\n";
   return;
 }
 
 
 void MyPoly::Attach(int coef, int expon) {
-  for(int i = 0; i < idx; i++) {
+  for(int i = 0; i < terms.size(); i++) {
      if(terms[i].expon == expon) {
         terms[i].coef += coef;
         return;
     }
   }
   
-  terms[idx++] = {coef, expon};
+  terms[idx] = {coef, expon};
   sort(terms, terms + idx, cmp);
+  idx++;
   return;
 }
 
 int MyPoly::Lead_Exp() {
-  return terms[0].expon;
+  return terms[0].coef;
 }
 
 void MyPoly::SingleMult(int n) {
-  for(int i = 0; i < idx; i++) {
+  for(int i = 0; i < terms.size(); i++) {
     terms[i].coef *= n;
   }
   return;
 }
 
 void MyPoly::refresh(const char* filename) {
-  idx = 0;
+  terms.clear();
   ifstream ifs(filename, ifstream::in);
   polynomial input;
   while(ifs >> input.coef >> input.expon) {
@@ -174,33 +160,33 @@ MyPoly MyPoly::Add(MyPoly poly2) {
 
   int idxR = 0, idxL = 0;
   
-  while(idxR < idx && idxL < poly2.idx) {
+  while(idxR < terms.size() && idxL < poly2.terms.size()) {
     if(terms[idxR].expon > poly2.terms[idxL].expon) {
-      res.terms[res.idx] = terms[idxR];
+      res.terms[idx] = terms[idxR];
       idxR++;
     }
     else if(terms[idxR].expon < poly2.terms[idxL].expon) {
-      res.terms[res.idx] = poly2.terms[idxL];
+      res.terms[idx] = poly2.terms[idxL];
       idxL++;
     }
     else {
-      res.terms[res.idx] = {terms[idxR].coef + poly2.terms[idxL].coef, terms[idxR].expon};
+      res.terms[idx] = {terms[idxR].coef + poly2.terms[idxL].coef, terms[idxR].expon};
       idxR++;
       idxL++;
     }
-    res.idx++;
+    idx++;
   }
 
-  while(idxR < idx) {
-    res.terms[res.idx] = terms[idxR];
+  while(idxR < terms.size()) {
+    res.terms[idx] = terms[idxR];
     idxR++;
-    res.idx++;
+    idx++;
   }
 
-  while(idxL < poly2.idx) {
-    res.terms[res.idx] = poly2.terms[idxL];
+  while(idxL < poly2.terms.size()) {
+    res.terms[idx] = poly2.terms[idxL];
     idxL++;
-    res.idx++;
+    idx++;
   }
 
   return res;
@@ -208,7 +194,7 @@ MyPoly MyPoly::Add(MyPoly poly2) {
 
 void OutputSelect() {
   cout << "Select function:\n";
-  cout << "1、讀入多項式\n2、印出多項式內容\n3、多項式相加\n4、多項式乘上一數值\n5、印出多項式中最大指數\n6、新增項式\n7、刪除多項式中的項式\n8、多項式相乘\n";
+  cout << "1、讀入多項式\n2、印出多項式內容\n3、多項式相加\n4、多項式乘上一數值\n5、印出多項式中最大指數的係數\n6、新增項式\n7、刪除多項式中的項式\n8、多項式相乘\n";
   return;
 }
 
@@ -228,6 +214,8 @@ void solve(){
     } else if(mode == 2) {
       poly.ShowPoly();
     } else if(mode == 3) {
+      // MyPoly result = poly.Add(poly2);
+      // result.ShowPoly();
       poly = poly.Add(poly2);
       poly.ShowPoly();
     } else if(mode == 4) {

@@ -221,7 +221,7 @@ void solve(){
   while(mode != -1) {
     OutputSelect();
     cin >> mode;
-    system("clear");
+    // system("clear");
 
     if(mode == 1) {
       poly.refresh("B1.txt");

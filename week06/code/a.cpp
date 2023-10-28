@@ -355,11 +355,11 @@ void solve(){
     showshow(a, b);
   }
 
-  else {
+  else if(mode == 2) {
     LongInt a, b;
     showshow(a, b);
   }
-  
+
   return;
 }
 

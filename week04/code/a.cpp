@@ -117,6 +117,7 @@ void MyPoly::Remove(int expon) {
 
 
 void MyPoly::Attach(int coef, int expon) {
+  cout << idx << "\n";
   for(int i = 0; i < idx; i++) {
      if(terms[i].expon == expon) {
         terms[i].coef += coef;
@@ -152,13 +153,7 @@ void MyPoly::refresh(const char* filename) {
 }
 
 MyPoly::MyPoly(const char* filename) {
-  ifstream ifs(filename, ifstream::in);
-  polynomial input;
-  while(ifs >> input.coef >> input.expon) {
-    terms[idx] = input;
-    idx++;
-  }
-  ifs.close();
+  idx = 0;
 }
 
 void MyPoly::ShowPoly() {
@@ -221,7 +216,7 @@ void solve(){
   while(mode != -1) {
     OutputSelect();
     cin >> mode;
-    // system("clear");
+    system("clear");
 
     if(mode == 1) {
       poly.refresh("B1.txt");

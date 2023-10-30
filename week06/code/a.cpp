@@ -188,7 +188,7 @@ LongInt LongInt::Div(LongInt b) {
   }
 
   ans = Rptr;
-  ans.IsPositive = ((a.IsPositive ^ b.IsPositive) ^ 1);
+  // ans.IsPositive = ((a.IsPositive ^ b.IsPositive) ^ 1);
 
   return ans;
 }

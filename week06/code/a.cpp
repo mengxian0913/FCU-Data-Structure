@@ -24,7 +24,7 @@ struct LongInt {
   bool IsPositive;
   LongInt(); //利用亂數產生一個長度小於 19 的值
   LongInt(int); //指定一個長度小於 19 的值
-  LongInt(const char*);
+  LongInt(const char*, const int);
  
   void Zero(); //將本身的陣列初始為 0
   void Show(); //顯示陣列
@@ -67,11 +67,14 @@ LongInt::LongInt(int num) {
   }
 }
 
-LongInt::LongInt(const char* filename) {
+LongInt::LongInt(const char* filename, int now) {
   Zero();
   ifstream ifs(filename, ifstream::in);
   string input;
   ifs >> input;
+  if(now == 2) {
+    ifs >> input;
+  }
   int idx = 0;
 
   IsPositive = true;
@@ -87,9 +90,6 @@ LongInt::LongInt(const char* filename) {
 }
 
 ///////////////////////////////////////////////////////
-
-
-
 
 
 ///////////////////////////////////////////////////////
@@ -134,6 +134,37 @@ LongInt LongInt::operator / (LongInt b) {
 
 
 ///////////////////////////////////////////////////////
+
+LongInt divided(LongInt num) {
+  LongInt res(0LL);
+  int start = MAXN - 1;
+  for(int i = 0; i < MAXN; i++) {
+    if(num.MyInt[i] != 0) {
+      start = i;
+      break;
+    }
+  }
+
+
+
+  int now = 0;
+  string ans = "";
+  while(start < MAXN) {
+    now *= 10;
+    now += num.MyInt[start];
+    ans += to_string(now / 2);
+    now %= 2;
+    start++;
+  }
+
+  for(int i = ans.size() - 1, j = MAXN - 1; i >= 0; i--, j--) {
+    res.MyInt[j] = (int)(ans[i] - '0');
+  }
+
+  return res;
+}
+
+
 LongInt LongInt::Div(LongInt b) {
   if (b == LongInt(static_cast<int>(0))) {
     cout << "You can not divided by 0\n";
@@ -145,17 +176,18 @@ LongInt LongInt::Div(LongInt b) {
   LongInt tmp1 = a, tmp2 = b;
   tmp1.IsPositive = tmp2.IsPositive = true;
 
-  LongInt Lptr(static_cast<int>(0)), Rptr(tmp1);
   LongInt ans(static_cast<int>(0));
-  for(LongInt i = LongInt(static_cast<int>(0)); i <= tmp1; i = i + 1) {
-    LongInt now = (tmp2 * i);
-    if(now <= tmp1) {
-      ans = i;
+  LongInt Lptr(0LL), Rptr(tmp1);
+  while(Lptr <= Rptr) {
+    LongInt mid = divided(Lptr + Rptr);
+    if(tmp2 * mid <= tmp1) {
+      Lptr = mid + LongInt(1LL);
     } else {
-      break;
+      Rptr = mid - LongInt(1LL);
     }
   }
 
+  ans = Rptr;
   ans.IsPositive = ((a.IsPositive ^ b.IsPositive) ^ 1);
 
   return ans;
@@ -351,7 +383,7 @@ void solve(){
   }
 
   if(mode == 1) {
-    LongInt a("./a.txt"), b("./b.txt");
+    LongInt a("./A.txt", 1), b("./A.txt", 2);
     showshow(a, b);
   }
 

@@ -319,7 +319,6 @@ void LongInt::Show() {
     cout << MyInt[i];
   }
 
-  cout << "\n";
   return;
 }
 ///////////////////////////////////////////////////////
@@ -360,16 +359,23 @@ LongInt LongInt::Multi(LongInt b) {
 void showshow(LongInt a, LongInt b) {
   cout << "a =     ";
   a.Show();
-  cout << "b =     ";
+  cout << "\nb =     ";
   b.Show();
-  cout << "a + b = ";
+  cout << "\na + b = ";
   (a + b).Show();
-  cout << "a - b = ";
+  cout << "\na - b = ";
   (a - b).Show();
-  cout << "a * b = ";
+  cout << "\na * b = ";
   (a * b).Show();
-  cout << "a / b = ";
+  cout << "\na / b = ";
   (a / b).Show();
+  cout << " ("; 
+  a.Show();
+  cout << "/"; 
+  b.Show();
+  cout << ")\n";
+
+  return;
 }
 
 

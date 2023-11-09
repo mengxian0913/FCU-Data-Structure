@@ -9,8 +9,6 @@ struct Node {
   Node *nxt = NULL;
 };
 
-
-
 signed main() {
   Node *head = (Node*)malloc(sizeof(Node));
   Node *current = head;

@@ -3,17 +3,9 @@ using namespace std;
 
 #define int long long
 #define pb push_back
-// e s
-// eeeeabcsdes
-// abcds
 stack<char> st;
 
-// eaaebbseass
-
-
 string get_ans(string ms) {
-	cout << "ms: " << ms << "\n"; 
-	
 	int cnt = 0;
 	for(int i = 0; i < ms.size(); i++) {
 		if(ms[i] == 's') {
@@ -26,32 +18,25 @@ string get_ans(string ms) {
 						break;
 					}
 				}
-			}
-			
-			else {
+			} else {
 				st.push(ms[i]);
 			}
-		}
-	
-		else {
+		} else {
 			if(ms[i] == 'e') cnt++;
 			st.push(ms[i]);
 		}
 	}
 	
 	string ans = "";
-	
 	while(!st.empty()) {
 		ans = st.top() + ans;
 		st.pop(); 
 	}
-	
 	return ans;
 }
 
 void solve() {	
 	string ss, ms = "";
-
 	ifstream ifs("input.txt", ifstream::in);
 	
 	if(!ifs.is_open()) {
@@ -66,10 +51,8 @@ void solve() {
 		}
 		ms += ss;
 		ms += "\n";
-	}
-	
+	}	
 	cout << get_ans(ms) << "\n";
-	
 	return;
 }
 

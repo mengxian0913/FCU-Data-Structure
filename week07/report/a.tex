@@ -1,0 +1,172 @@
+% !TeX encoding = UTF-8
+% !TeX program = xelatex
+\documentclass[12pt, a4paper]{article}
+\usepackage[CheckSingle, CJKmath]{xeCJK}
+\usepackage{fontspec}
+\usepackage{graphicx} % 插入圖片
+\usepackage{caption}
+\usepackage{enumerate}
+\usepackage{setspace}
+\usepackage{array} % 製作表格必須的宏包
+\usepackage{tabularx} % 自動調整列寬的表格宏包
+\usepackage{adjustbox}
+\usepackage{geometry} 
+
+\setCJKfamilyfont{heiti}{Heiti TC}
+\CJKfamily{heiti}
+\setmainfont{Arial}
+\setstretch{1.5}
+
+
+\usepackage{amsthm}                             %定義，例題
+\usepackage{amssymb}
+\usepackage{fancyhdr}                           %設定頁首頁尾
+\usepackage{titlesec}
+\usepackage{amsmath}
+\usepackage{CJKulem}
+\usepackage{amsmath, courier, listings, fancyhdr, graphicx}
+\usepackage{listings}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{times}
+\usepackage{listings}
+\usepackage{color}
+\usepackage[x11names]{xcolor}
+
+% \headsep=2pt
+% \textheight=740pt
+% \footskip=0pt
+% \voffset=-50pt
+% \textwidth=545pt
+% \marginparsep=0pt
+% \marginparwidth=0pt
+% \marginparpush=0pt
+% \oddsidemargin=0pt
+% \evensidemargin=0pt
+% \hoffset=-42pt
+
+
+\setmainfont[
+    AutoFakeSlant,
+    BoldItalicFeatures={FakeSlant},
+    UprightFont={*},
+    BoldFont={*-Bold}
+]{Inconsolata}
+
+\setmonofont[
+    AutoFakeSlant,
+    BoldItalicFeatures={FakeSlant},
+    BoldFont={*-Bold}
+]{Inconsolata}
+
+
+\makeatletter
+\lst@CCPutMacro\lst@ProcessOther {"2D}{\lst@ttfamily{-{}}{-{}}}
+\@empty\z@\@empty
+\makeatother
+\lstset{                                        % Code顯示
+    language=C++,                               % the language of the code
+    basicstyle=\footnotesize\ttfamily,          % the size of the fonts that are used for the code
+    numbers=left,                               % where to put the line-numbers
+    numberstyle=\scriptsize,                    % the size of the fonts that are used for the line-numbers
+    stepnumber=1,                               % the step between two line-numbers. If it's 1, each line  will be numbered
+    numbersep=5pt,                              % how far the line-numbers are from the code
+    backgroundcolor=\color{white},              % choose the background color. You must add \usepackage{color}
+    showspaces=false,                           % show spaces adding particular underscores
+    showstringspaces=false,                     % underline spaces within strings
+    showtabs=false,                             % show tabs within strings adding particular underscores
+    frame=false,                                % adds a frame around the code
+    tabsize=2,                                  % sets default tabsize to 2 spaces
+    captionpos=b,                               % sets the caption-position to bottom
+    breaklines=true,                            % sets automatic line breaking
+    breakatwhitespace=true,                     % sets if automatic breaks should only happen at whitespace
+    escapeinside={\%*}{*)},                     % if you want to add a comment within your code
+    morekeywords={*},                           % if you want to add more keywords to the set
+    keywordstyle=\bfseries\color{Blue1},
+    commentstyle=\itshape\color{Red1},
+    stringstyle=\itshape\color{Green4},
+}
+
+
+
+
+
+
+\begin{document}
+  \begin{center}
+    {\Huge 資料結構實習} \\[2.5cm]
+    {\Huge 11/03 作業報告} \\[1.5cm]
+    {\Huge Stack 實作 (e, s) segment} \\ [4.5cm]
+    \hspace{.6in}
+    \begin{minipage}[t]{.4\linewidth}
+      {\Large 班級：資訊二甲}\\[0.5cm]
+      {\Large 學號：D1109023}\\[0.5cm]
+      {\Large 姓名：楊孟憲}
+    \end{minipage}    
+  \end{center}
+
+  \newpage
+
+  \begin{samepage}
+    \fontsize{16pt}{18pt} \selectfont  
+    % 生成目錄
+    \tableofcontents
+    \normalfont
+  \end{samepage}
+  
+  \newpage
+
+
+  \section{\fontsize{20pt}{22pt}\selectfont 引言}
+  \begin{samepage}
+    \fontsize{16pt}{18pt} \selectfont
+      Stack 是一個只有一個開口的單向輸入輸出的資料結構，在日常生活中可以使用該資料結構維護許多演算法。
+      插入以及拿取都只需要 $O(1)$ 的時間。 以下是利用 LinkedList 實作 Stack 的方法。(以下是使用 C 實作 Stack 的 push/pop)
+      \lstinputlisting[language=C++]{../code/Stack.c}
+  \end{samepage}
+
+  % 第一個章節
+
+  \section{\fontsize{20pt}{22pt}\selectfont 題目敘述}
+  \begin{samepage}
+    \fontsize{16pt}{18pt} \selectfont
+        \textbf{題意說明:}如果在一個字串當中其頭一個字母為 E，最後一個字母為 S，而兩個字母 中間不包含任何 E 或 S
+        字母的話，則稱為 ES 字串。
+        請利用堆疊 (Stacks) 的原理，撰寫出一個程式，從檔案(input.txt)讀入一段文章或是字串，然後消去所有
+        可能的 ES 字串，使得消去後的字串輸出 不包含任何 ES 字串。
+  \end{samepage}
+  % 第二個章節
+
+  \section{\fontsize{20pt}{22pt}\selectfont 作法}
+  % 第二章節的子章節
+  \begin{samepage}
+    \fontsize{16pt}{18pt} \selectfont
+      使用 C++ 的 STL Stack 實作。
+      遍歷字串的每一個字元，當前字元為 's' 時，判斷 stack 是否為空並且如果前面有 'e' 的話 (cnt > 0)，就不斷地把先前的字元從 stack 拿出來，直到 now == 'e'，並且將 cnt-1，這能夠確保之後的 e, s 區間能被正確的移除。
+      否則，就把 's' 放進 stack 裡。 \\
+      如果當前字元不為 's' 的話，就放進 stack 裡，並且判斷如果當前字元為 'e' 的話，就 cnt++;\\
+      \textbf{範例程式碼}  
+    \lstinputlisting[language=C++]{../code/a.cpp}
+    \normalfont
+  \end{samepage}
+
+  \section{\fontsize{20pt}{22pt}\selectfont 執行結果}
+  % 第三個章節
+      \fontsize{16pt}{18pt} \selectfont
+        輸入輸出結果：
+        \begin{enumerate}
+          \item 輸入：
+            \lstinputlisting{../code/input.txt}
+          \item 輸出：
+            \lstinputlisting{../code/output.txt}
+        \end{enumerate}
+      \normalsize
+
+  \section{\fontsize{20pt}{22pt}\selectfont 心得與討論}
+  \begin{samepage}
+    \fontsize{16pt}{18pt} \selectfont
+      這次的作業利用 Stack 的原理來完成，是一個常見的模板題，實作起來沒有什麼問題，這讓我更加了解 Stack 的運作原理。
+    \normalfont
+  \end{samepage}
+  % 最後一個章節
+\end{document}

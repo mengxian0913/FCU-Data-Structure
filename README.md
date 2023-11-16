@@ -1,5 +1,9 @@
 # Data Structure
 
+> Report Template: [Latex Template](https://github.com/mengxian0913/FCUDataStructureLatexTemplate)
+
+---
+
 - Week 01 DataStucture Instruction
 - Week 02 Recursion
 - Week 03 BinToDec

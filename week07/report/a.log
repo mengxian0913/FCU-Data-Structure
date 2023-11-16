@@ -1,12 +1,12 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.9.25)  12 NOV 2023 18:21
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.9.25)  13 NOV 2023 20:40
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/vincent/Desktop/資料結構實習/week07/report/a
-(/Users/vincent/Desktop/資料結構實習/week07/report/a.tex
+**a.tex
+(./a.tex
 LaTeX2e <2022-11-01> patch level 1
-L3 programming layer <2023-02-22> (/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
+L3 programming layer <2023-02-22>
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
 (/usr/local/texlive/2022/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
@@ -22,9 +22,12 @@ File: size12.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
-) (/usr/local/texlive/2022/texmf-dist/tex/xelatex/xecjk/xeCJK.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/l3kernel/expl3.sty
+)
+(/usr/local/texlive/2022/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2023-02-22 L3 programming layer (loader) 
- (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
 File: l3backend-xetex.def 2023-01-16 L3 backend support: XeTeX
 \g__graphics_track_int=\count189
 \l__pdf_internal_box=\box51
@@ -33,9 +36,12 @@ File: l3backend-xetex.def 2023-01-16 L3 backend support: XeTeX
 \g__pdf_backend_link_int=\count192
 ))
 Package: xeCJK 2022/08/05 v3.9.1 Typesetting CJK scripts with XeLaTeX
- (/usr/local/texlive/2022/texmf-dist/tex/latex/ctex/ctexhook.sty
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/ctex/ctexhook.sty
 Package: ctexhook 2022/07/14 v2.5.10 Document and package hooks (CTEX)
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.st
+y
 Package: xtemplate 2023-02-02 L3 Experimental prototype document functions
 \l__xtemplate_tmp_dim=\dimen141
 \l__xtemplate_tmp_int=\count193
@@ -102,12 +108,15 @@ Package xtemplate Info: Declaring object type 'xeCJK/punctuation' taking 0
 \g__xeCJK_fam_allocation_int=\count270
 \l__xeCJK_verb_case_int=\count271
 \l__xeCJK_verb_exspace_skip=\skip57
- (/usr/local/texlive/2022/texmf-dist/tex/latex/fontspec/fontspec.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2023-02-02 L3 Experimental document command parser
 )
 Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
- (/usr/local/texlive/2022/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
-Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTe
+X
 \l__fontspec_script_int=\count272
 \l__fontspec_language_int=\count273
 \l__fontspec_strnum_int=\count274
@@ -122,31 +131,42 @@ Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
 \l__fontspec_tmpa_dim=\dimen169
 \l__fontspec_tmpb_dim=\dimen170
 \l__fontspec_tmpc_dim=\dimen171
- (/usr/local/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (/usr/local/texlive/2022/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2022/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
 File: xeCJK.cfg 2022/08/05 v3.9.1 Configuration file for xeCJK package
-)) (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: xetex.def on input line 107.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-def/xetex.def
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-def/xetex.def
 File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
 ))
 \Gin@req@height=\dimen172
 \Gin@req@width=\dimen173
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2022/03/01 v3.6b Customizing captions (AR)
- (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
 \caption@tempdima=\dimen174
 \captionmargin=\dimen175
@@ -160,12 +180,15 @@ Package caption Info: Standard document class detected.
 )
 \c@caption@flags=\count283
 \c@continuedfloat=\count284
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/enumerate.sty
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \@enLab=\toks17
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/setspace/setspace.sty
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/array.sty
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tools/array.sty
 Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
 \col@sep=\dimen182
 \ar@mcellbox=\box54
@@ -174,7 +197,8 @@ Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
 \extratabsurround=\skip58
 \backup@length=\skip59
 \ar@cellbox=\box55
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/tabularx.sty
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \TX@col@width=\dimen184
 \TX@old@table=\dimen185
@@ -183,21 +207,29 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \TX@delta=\dimen188
 \TX@cols=\count285
 \TX@ftn=\toks19
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
- (/usr/local/texlive/2022/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
- (/usr/local/texlive/2022/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/texlive/2022/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2022/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks20
 \XKV@tempa@toks=\toks21
 )
 \XKV@depth=\count286
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-)) (/usr/local/texlive/2022/texmf-dist/tex/latex/adjustbox/adjcalc.sty
-Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/adjustbox/trimclip.sty
+))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/adjustbox/trimclip.sty
 Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
- (/usr/local/texlive/2022/texmf-dist/tex/latex/collectbox/collectbox.sty
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
 \collectedbox=\box56
 )
@@ -206,7 +238,8 @@ Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
 \tc@urx=\dimen191
 \tc@ury=\dimen192
 Package trimclip Info: Using driver 'tc-xetex.def'.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/adjustbox/tc-xetex.def
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/adjustbox/tc-xetex.def
 File: tc-xetex.def 2019/01/04 v2.2 Clipping driver for xetex
 ))
 \adjbox@Width=\dimen193
@@ -217,20 +250,25 @@ File: tc-xetex.def 2019/01/04 v2.2 Clipping driver for xetex
 \adjbox@pheight=\dimen198
 \adjbox@pdepth=\dimen199
 \adjbox@ptotalheight=\dimen256
- (/usr/local/texlive/2022/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
 \c@checkoddpage=\count287
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/varwidth/varwidth.sty
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box57
 \sift@deathcycles=\count288
 \@vwid@loff=\dimen257
 \@vwid@roff=\dimen258
-)) (/usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
+))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
- (/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
- (/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
 \Gm@cnth=\count289
@@ -279,16 +317,20 @@ Package fontspec Info: Font family 'Arial(0)' created for font 'Arial' with
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"Arial/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             <->"Arial/OT:script=latn;language=dflt;mapping=tex-text;
+"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"Arial/B/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             <->"Arial/B/OT:script=latn;language=dflt;mapping=tex-tex
+t;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"Arial/I/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             <->"Arial/I/OT:script=latn;language=dflt;mapping=tex-tex
+t;"
 (fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->"Arial/BI/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             <->"Arial/BI/OT:script=latn;language=dflt;mapping=tex-te
+xt;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
 
@@ -308,9 +350,11 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@postskip=\skip61
 \thm@headsep=\skip62
 \dth@everypar=\toks28
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/amssymb.sty
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
- (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks29
 \symAMSa=\mathgroup4
@@ -318,8 +362,10 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (/usr/local/texlive/2022/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+
 \f@nch@headwidth=\skip63
 \f@nch@O@elh=\skip64
 \f@nch@O@erh=\skip65
@@ -329,7 +375,8 @@ Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 \f@nch@O@erf=\skip69
 \f@nch@O@olf=\skip70
 \f@nch@O@orf=\skip71
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/titlesec/titlesec.sty
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2021/07/05 v2.14 Sectioning titles
 \ttl@box=\box58
 \beforetitleunit=\skip72
@@ -340,21 +387,25 @@ Package: titlesec 2021/07/05 v2.14 Sectioning titles
 \titlewidth=\dimen269
 \titlewidthlast=\dimen270
 \titlewidthfirst=\dimen271
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2022/04/08 v2.17n AMS math features
 \@mathmargin=\skip74
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
- (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsgen.sty
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks31
 \ex@=\dimen272
-)) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsbsy.sty
+))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen273
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count292
@@ -412,7 +463,8 @@ LaTeX Info: Package 'CJKulem.sty' has been disabled.
             Load request ignored on input line 27.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/courier.sty
 Package: courier 2020/03/25 PSNFSS-v9.3 (WaS) 
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.sty
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count304
 \lst@gtempboxa=\box61
 \lst@token=\toks36
@@ -425,20 +477,24 @@ Package: courier 2020/03/25 PSNFSS-v9.3 (WaS)
 \lst@newlines=\count308
 \lst@lineno=\count309
 \lst@maxwidth=\dimen284
- (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 \c@lstnumber=\count310
 \lst@skipnumbers=\count311
 \lst@framebox=\box62
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.cfg
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2023/02/27 1.9 listings configuration
 ))
 Package: listings 2023/02/27 1.9 (Carsten Heinz)
- (/usr/local/texlive/2022/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
+
+(/usr/local/texlive/2022/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
 Package: xeCJK-listings 2022/08/05 v3.9.1 xeCJK patch file for listings
 \l__xeCJK_listings_max_char_int=\count312
 \l__xeCJK_listings_flag_int=\count313
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks37
 \inpenc@posthook=\toks38
@@ -451,10 +507,12 @@ Package: babel 2023/02/13 3.86 The Babel package
 \babel@savecnt=\count314
 \U@D=\dimen285
 \l@unhyphenated=\language87
- (/usr/local/texlive/2022/texmf-dist/tex/generic/babel/xebabel.def)
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/babel/xebabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count315
- (/usr/local/texlive/2022/texmf-dist/tex/generic/babel-english/english.ldf
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
@@ -462,25 +520,33 @@ Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
 (babel)             (\language21). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
 (babel)             (\language21). Reported on input line 108.
-)) (/usr/local/texlive/2022/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
+))
+(/usr/local/texlive/2022/texmf-dist/tex/generic/babel/locale/en/babel-english.t
+ex
 Package babel Info: Importing font and identification data for english
 (babel)             from babel-en.ini. Reported on input line 11.
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/color.sty
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
- (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: xetex.def on input line 149.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (/usr/local/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
- (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: xetex.def on input line 227.
 LaTeX Info: Redefining \color on input line 711.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
 Package xcolor Info: Model `RGB' extended on input line 1369.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
@@ -489,7 +555,8 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/xcolor/x11nam.def
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/xcolor/x11nam.def
 File: x11nam.def 2022/06/12 v2.14 Predefined colors according to Unix/X11 (UK)
 ))
 
@@ -507,19 +574,23 @@ Package fontspec Info: Could not resolve font "Inconsolata/BI" (it probably
 
 Package fontspec Info: Font family 'Inconsolata(0)' created for font
 (fontspec)             'Inconsolata' with options
-(fontspec)             [Ligatures=TeX,AutoFakeSlant,BoldItalicFeatures={FakeSlant},UprightFont={*},BoldFont={*-Bold}].
+(fontspec)             [Ligatures=TeX,AutoFakeSlant,BoldItalicFeatures={FakeSla
+nt},UprightFont={*},BoldFont={*-Bold}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"Inconsolata/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             <->"Inconsolata/OT:script=latn;language=dflt;mapping=tex
+-text;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"Inconsolata-Bold/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             <->"Inconsolata-Bold/OT:script=latn;language=dflt;mappin
+g=tex-text;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"Inconsolata/OT:script=latn;language=dflt;slant=0.2;mapping=tex-text;"
+(fontspec)             <->"Inconsolata/OT:script=latn;language=dflt;slant=0.2;m
+apping=tex-text;"
 (fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
 
 
@@ -537,7 +608,8 @@ Package fontspec Info: Could not resolve font "Inconsolata/BI" (it probably
 
 Package fontspec Info: Font family 'Inconsolata(1)' created for font
 (fontspec)             'Inconsolata' with options
-(fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=WordSpace,AutoFakeSlant,BoldItalicFeatures={FakeSlant},BoldFont={*-Bold}].
+(fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=Word
+Space,AutoFakeSlant,BoldItalicFeatures={FakeSlant},BoldFont={*-Bold}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
@@ -560,6 +632,7 @@ Package fontspec Info: Font family 'Inconsolata(1)' created for font
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
 (fontspec)             <->"Inconsolata/OT:script=latn;language=dflt;slant=0.2;"
+
 (fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
 (fontspec)             and font adjustment code:
 (fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
@@ -567,11 +640,14 @@ Package fontspec Info: Font family 'Inconsolata(1)' created for font
 (fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
- (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 )
 
@@ -583,7 +659,8 @@ Package xeCJK Warning: Undefined CJK default family `\CJKrmdefault' has been
 
 \symCJKmath=\mathgroup255
 LaTeX Font Info:    Overwriting symbol font `CJKmath' in version `bold'
-(Font)                  TU/HeitiTC(0)/m/n --> TU/HeitiTC(0)/b/n on input line 95.
+(Font)                  TU/HeitiTC(0)/m/n --> TU/HeitiTC(0)/b/n on input line 9
+5.
 (./a.aux)
 \openout1 = `a.aux'.
 
@@ -596,7 +673,8 @@ LaTeX Font Info:    ... okay on input line 95.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 95.
 LaTeX Font Info:    ... okay on input line 95.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 95.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 95.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 9
+5.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
@@ -641,28 +719,37 @@ LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
 (Font)              `operators' in the math version `normal' on input line 95.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/Inconsolata(0)/m/n on input line 95.
+
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
 (Font)              `operators' in the math version `bold' on input line 95.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/Inconsolata(0)/m/n on input line 95.
+(Font)                  OT1/cmr/bx/n --> TU/Inconsolata(0)/m/n on input line 95
+.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/Inconsolata(0)/m/n --> TU/Inconsolata(0)/m/n on input line 95.
+(Font)                  TU/Inconsolata(0)/m/n --> TU/Inconsolata(0)/m/n on inpu
+t line 95.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/Inconsolata(0)/m/it on input line 95.
+(Font)                  OT1/cmr/m/it --> TU/Inconsolata(0)/m/it on input line 9
+5.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/Inconsolata(0)/b/n on input line 95.
+(Font)                  OT1/cmr/bx/n --> TU/Inconsolata(0)/b/n on input line 95
+.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
 (Font)                  OT1/cmss/m/n --> TU/phv/m/n on input line 95.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/Inconsolata(1)/m/n on input line 95.
+(Font)                  OT1/cmtt/m/n --> TU/Inconsolata(1)/m/n on input line 95
+.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/Inconsolata(0)/m/n --> TU/Inconsolata(0)/b/n on input line 95.
+(Font)                  TU/Inconsolata(0)/m/n --> TU/Inconsolata(0)/b/n on inpu
+t line 95.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/Inconsolata(0)/b/it on input line 95.
+(Font)                  OT1/cmr/bx/it --> TU/Inconsolata(0)/b/it on input line 
+95.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/phv/b/n on input line 95.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/Inconsolata(1)/b/n on input line 95.
+(Font)                  OT1/cmtt/m/n --> TU/Inconsolata(1)/b/n on input line 95
+.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -719,12 +806,15 @@ LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <16> not available
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <16> not available
 (Font)              size <17.28> substituted on input line 124.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 124.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 124
+.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 124.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
+LaTeX Font Info:    Trying to load font information for U+msb on input line 124
+.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
@@ -737,19 +827,20 @@ Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
 (xeCJK)                Try to use `\setCJKmonofont[<...>]{<...>}' to define
 (xeCJK)                it.
 
-(../code/Stack.c [3]) [4] (../code/a.cpp [5] [6]) (../code/input.txt) [7] (../code/output.txt) [8] (./a.aux)
+(../code/Stack.c [3]) [4] (../code/a.cpp [5] [6]) (../code/input.txt) [7]
+(../code/output.txt) [8] (./a.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 13950 strings out of 476684
- 304993 string characters out of 5804055
+ 13949 strings out of 476684
+ 304863 string characters out of 5804055
  1929018 words of memory out of 5000000
  33958 multiletter control sequences out of 15000+600000
  517842 words of font info for 97 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 70i,6n,97p,417b,1950s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 70i,6n,97p,377b,1950s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on a.pdf (8 pages).

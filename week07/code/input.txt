@@ -1,7 +1,23 @@
-And then there’s the journey itself – retiring to bed as you clatter out of a big city and waking up in a new city, or even a new country, can create memories to last a lifetime.
+Hard-real time systems become more vulnerable to faults especially
+in the instruction cache memory of COTS microprocessor. We propose
+in this paper a software based method that guarantees the real-time
+constraints while increasing the reliability of the task set. In particular,
+our method consists of two steps: in the first step, by using a static
+analysis, we compute the vulnerability profile of each task to find the
+best spots where to add a protection mechanism to reduce the vulnerability while increasing the WCET. Then, we propose two alternatives:
 
-At least that’s the theory – and why the new wave of night trains are being touted as one way to replace short or even medium-haul flights across Europe and the US.
+in the first one, we invalidate the cache in some of these spots using a
+software-only method; in the second one, we propose to modify the ISA
+of the processor to selectively enable ECC to specific instructions. We
+show, by a set of experiments on real benchmarks, a reduction of the
+task set vulnerability factor between 22% and 34% with cache block
+invalidation and of 50% while using ECC.
+As future work, we plan to extend our method to data caches.
+Addressing data cache would require a different kind of static analysis
+with respect to the must/may analysis we use for instruction caches.
+Also, data caches bring in additional problems, like the write policy
+(write-through vs. write-back). We also plan to adapt this method for
+schedulers that allow preemptions. We think that our method can be
+more performant on such systems as the vulnerable paths in the task
+may become larger due to preemptions.
 
-So how’s that going?
-
-Even before their renaissance, night trains could be a pleasant, memorable and sometimes economic way to cover long distances – but luck has always been a big factor.

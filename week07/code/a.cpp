@@ -38,6 +38,7 @@ string get_ans(string ms) {
 void solve() {	
 	string ss, ms = "";
 	ifstream ifs("input.txt", ifstream::in);
+  ofstream ofs("output.txt", ofstream::out);
 	
 	if(!ifs.is_open()) {
 		cout << "error\n";
@@ -47,12 +48,14 @@ void solve() {
 	while(getline(ifs, ss)) {
 		if(ss == "") {
 			cout << get_ans(ms) << "\n";
+      ofs << get_ans(ms) << "\n";
 			ms = "";
 		}
 		ms += ss;
 		ms += "\n";
 	}	
 	cout << get_ans(ms) << "\n";
+  ofs << get_ans(ms) << "\n";
 	return;
 }
 

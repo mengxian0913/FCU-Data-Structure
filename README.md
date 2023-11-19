@@ -11,3 +11,4 @@
 - Week 05 String
 - Week 06 BigNumber Operation
 - Week 07 Stack
+- Week 08 Infix to Profix

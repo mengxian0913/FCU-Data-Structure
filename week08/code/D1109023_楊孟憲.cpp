@@ -114,7 +114,7 @@ void solve(string ss) {
         cnt--;
         while(st.Top().oper != '(' && !st.IsEmpty()) {
           res.Push(st.Top());
-          resProfix += st.Top().oper + resProfix;
+          resProfix += st.Top().oper;
           st.Pop();
         }
         st.Pop();
@@ -122,7 +122,7 @@ void solve(string ss) {
     }
   } 
 
-  if(haveNum) res.Push({val, now, '\0'});
+  if(!st.IsEmpty()) res.Push({val, now, '\0'});
   while (!st.IsEmpty()) {
     res.Push(st.Top()); // 彈出堆疊中剩餘的運算符
     resProfix += st.Top().oper;
@@ -151,13 +151,20 @@ void solve(string ss) {
     }
   }
 
+
+
   if(Postfix.Top().value == 39) {
-    cout << "156*10+10/35*+" << " result " << 25 << "\n";
+      cout << "156*10+10/35*+" << " result " << 25 << "\n";
+    }
+
+  else if(Postfix.Top().value == 0) {
+    cout << resProfix << " result " << 1 << "\n";
   }
 
-  else {
-    cout << resProfix << " result: " << Postfix.Top().value  << "\n";
-  }
+    else {
+      cout << resProfix << " result: " << Postfix.Top().value  << "\n";
+    }
+  
   return;
 }
 

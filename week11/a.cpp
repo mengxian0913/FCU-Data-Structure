@@ -18,7 +18,7 @@ using namespace std;
 #define MOD (int)(1e9+7)
 
 struct Node {
-  char data;
+  int data;
   Node* llink;
   Node* rlink;
   Node(char c) {
@@ -42,14 +42,14 @@ struct Tree {
 void Tree::inorder(Node *tmp) {
   if (tmp != NULL) {
     inorder(tmp->llink);
-    std::cout << tmp->data << " ";
+    cout << tmp->data << " ";
     inorder(tmp->rlink);
   }
 }
 
 void Tree::preorder(Node *tmp) {
   if (tmp != NULL) {
-    std::cout << tmp->data << " ";
+    cout << tmp->data << " ";
     preorder(tmp->llink);
     preorder(tmp->rlink);
   }
@@ -59,7 +59,7 @@ void Tree::postorder(Node *tmp) {
   if (tmp != NULL) {
     postorder(tmp->llink);
     postorder(tmp->rlink);
-    std::cout << tmp->data << " ";
+    cout << tmp->data << " ";
   }
 }
 
@@ -100,8 +100,11 @@ void Tree::LevelTraversal() {
 
 Tree::Tree(const char *filename) {
   ifstream ifs(filename, ifstream::in);
-  string myNode;
-  ifs >> myNode;
+  vector<int>myNode(31);
+  for(int i = 0; i < 32; i++) {
+    myNode[i] = i;
+  }
+  // ifs >> myNode;
 
   queue<Node*>quptr;
   root = (Node*)malloc(sizeof(Node));
@@ -110,7 +113,7 @@ Tree::Tree(const char *filename) {
 
 
   for(int i = 1; i < myNode.size(); i+=2) {
-    char node1 = myNode[i], node2 = myNode[i + 1];
+    int node1 = myNode[i], node2 = myNode[i + 1];
     Node *fatherNode = quptr.front();
     quptr.pop();
 

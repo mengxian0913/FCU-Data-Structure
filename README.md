@@ -14,4 +14,4 @@
 - Week 08 Infix to Profix
 - Week 10 Relation Tree | Set
 - Week 11 Linked List Binary Tree
-- Weel 12 Heap Tree
+- Week 12 Heap Tree

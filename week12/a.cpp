@@ -7,6 +7,7 @@
 
 #pragma GCC optimize("O3")
 #include <bits/stdc++.h>
+#include <cstdlib> // for system
 using namespace std;
 #define int long long
 #define ff first
@@ -30,8 +31,86 @@ struct HeapTree {
   int GetLevel();
   void ShowTree();
   void HeapSort();
+  void AdjTopDown(int);
   void AdjustHeap(int);
-};
+} tree("./a.txt", -1);
+
+
+void HeapTree::AdjTopDown(int curIndex) {
+  int child1 = (curIndex + 1);
+  int child2 = (curIndex + 2);
+
+  if(mode == 1) {
+    if(child1 <= count && child2 <= count) {
+      if(data[child1] < data[child2]) {
+        if(data[curIndex] > data[child1]) {
+          swap(data[child1], data[curIndex]);
+          AdjTopDown(child1);
+        }
+      }
+
+      else {
+        if(data[curIndex] > data[child2]) {
+          swap(data[child2], data[curIndex]);
+          AdjTopDown(child2);
+        }
+      }
+    }
+
+    else if(child1 <= count && child2 > count && data[curIndex] > data[child1]) {
+      swap(data[curIndex], data[child1]);
+      AdjTopDown(child1);
+    }
+
+    else if(child2 <= count && child1 > count && data[curIndex] > data[child2]) {
+      swap(data[curIndex], data[child2]);
+      AdjTopDown(child2);
+    }
+
+  }
+
+  else {
+    if(child1 <= count && child2 <= count) {
+      if(data[child1] > data[child2]) {
+        if(data[curIndex] < data[child1]) {
+          swap(data[child1], data[curIndex]);
+          AdjTopDown(child1);
+        }
+      }
+
+      else {
+        if(data[curIndex] < data[child2]) {
+          swap(data[child2], data[curIndex]);
+          AdjTopDown(child2);
+        }
+      }
+    }
+
+    else if(child1 <= count && child2 > count && data[curIndex] < data[child1]) {
+      swap(data[curIndex], data[child1]);
+      AdjTopDown(child1);
+    }
+
+    else if(child2 <= count && child1 > count && data[curIndex] < data[child2]) {
+      swap(data[curIndex], data[child2]);
+      AdjTopDown(child2);
+    }
+
+  }
+  return;
+}
+
+
+void HeapTree::HeapSort() {
+  int curCount = count;
+  count--;
+  while(count >= 0) {
+    swap(data[0], data[count--]);
+    AdjTopDown(0);
+  }
+  count = curCount;
+  return;
+}
 
 HeapTree::HeapTree(const char *file, int md) {
   mode = md;
@@ -52,7 +131,7 @@ void HeapTree::AdjustHeap(int curIndex) {
   int numChild = data[curIndex];
   int numParent = data[(curIndex - 1) / 2];
   
-  if(mode == 0) swap(numChild, numParent);
+  if(mode == 1) swap(numChild, numParent);
 
   if(numChild > numParent) {
     swap(data[curIndex], data[(curIndex - 1) / 2]);
@@ -82,6 +161,8 @@ void HeapTree::ShowTree() {
       cout << " ";
     }
   }
+
+  cout << "\n\n";
   return;
 }
 
@@ -93,33 +174,78 @@ int HeapTree::GetLevel() {
   return level;
 }
 
-void solve(){
-  int mode;
-  cout << "選擇 (0)minHeap | (1)maxHeap: ";
-  cin >> mode;
-  HeapTree tree("./a.txt", mode);
-  cout << "Tree Level: " << tree.GetLevel() << "\n";
-  cout << "HeapTree:\n";
-  tree.ShowTree();
-  cout << "\n\n";
 
-  int insertNumber;
-  cout << "insertNumber(0 to end): ";
-  cin >> insertNumber;
-  while(insertNumber != 0) {
-    tree.InsertData(insertNumber);
+void printSelectList() {
+  cout << "選擇清單：\n\n";
+  cout << "(1) 讀取 Heap\n\n";
+  cout << "(2) 插入 節點\n\n";
+  cout << "(3) 印出 HeapSort 後結果\n\n";
+  cout << "Your Input: ";
+  return;
+}
+
+void printMode() {
+  cout << "(1) minHeap\n\n";
+  cout << "(2) maxHeap\n\n";
+  cout << "Your Input: ";
+  return;
+}
+
+
+void solve(int mode) {
+  
+  if(mode == 1) {
+    int MinMax = 0;
+    printMode();
+    cin >> MinMax;
+    system("clear");
+    if(MinMax != 1 && MinMax != 2) return;
+    HeapTree curTree("./a.txt", MinMax); 
+    tree = curTree;
+    cout << "Tree Level: " << tree.GetLevel() << "\n";
+    cout << "HeapTree:\n";
     tree.ShowTree();
-    cout << "\n\n";
-    cout << "insertNumber(0 to end): ";
-    cin >> insertNumber;
   }
-  cout << "Final HeapTree: \n";
-  tree.ShowTree();
+
+
+  else if(mode == 2) {
+    if(tree.mode == -1) {
+      cout << "請先選擇 Heap 規則\n";
+      return;
+    }
+    int insertNumber;
+    cout << "Enter the number: ";
+    cin >> insertNumber;
+    system("clear");
+    tree.InsertData(insertNumber);
+    cout << "Tree Level: " << tree.GetLevel() << "\n";
+    cout << "HeapTree:\n";
+    tree.ShowTree();
+  }
+
+
+  else if(mode == 3) {
+    if(tree.mode == -1) {
+      cout << "請先選擇 Heap 規則\n";
+      return;
+    }
+    cout << "Sorted HeapTree: \n";
+    tree.HeapSort();
+    tree.ShowTree();
+  }
+
   return;
 }
 
 signed main(){
-  // fastIO
-  solve();
+  int mode;
+  char modeC;
+  do {
+    printSelectList();
+    cin >> modeC;
+    mode = modeC - '0';
+    system("clear");
+    solve(mode);
+  } while(true);
   return 0;
 }

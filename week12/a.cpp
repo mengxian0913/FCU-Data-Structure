@@ -232,6 +232,11 @@ void solve(int mode) {
     cout << "Sorted HeapTree: \n";
     tree.HeapSort();
     tree.ShowTree();
+    cout << "data result: ";
+    for(int i = 0; i < tree.count; i++) {
+      cout << tree.data[i] << " ";
+    }
+    cout << "\n\n";
   }
 
   return;

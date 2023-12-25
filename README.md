@@ -15,3 +15,4 @@
 - Week 10 Relation Tree | Set
 - Week 11 Linked List Binary Tree
 - Week 12 Heap Tree
+- Week 13 Binary Tree Insert | Search
